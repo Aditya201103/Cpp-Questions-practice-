@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+cout<<"Data Types and their Sizes : "<<endl;
+cout<<"int : "<<sizeof(int)<<endl;
+cout<<"double : "<<sizeof(double);
+return 0;
+}
+
