@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    char ch;
+
+    cout << "Enter a character: "<<endl;
+    cin >> ch;
+    int ascii_value=ch;
+    cout << "The ASCII value of " << ch << " is " << ascii_value<<endl;
+
+    return 0;
+}
