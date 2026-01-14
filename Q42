@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+class Test {
+private:
+    int a;
+public:
+    void set(int x) {
+        a = x;
+    }
+    void show() {
+        cout << a;
+    }
+};
+
+int main() {
+    Test t;
+    t.set(5);
+    t.show();
+    return 0;
+}
