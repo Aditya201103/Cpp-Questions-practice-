@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+class B;
+
+class A {
+    int x;
+public:
+    A() { x = 10; }
+    friend void swap(A&, B&);
+    void show() { cout << x << " "; }
+};
+
+class B {
+    int y;
+public:
+    B() { y = 20; }
+    friend void swap(A&, B&);
+    void show() { cout << y << " "; }
+};
+
+void swap(A &a, B &b) {
+    int temp = a.x;
+    a.x = b.y;
+    b.y = temp;
+}
+
+int main() {
+    A a;
+    B b;
+
+    a.show();
+    b.show();
+
+    swap(a, b);
+
+    cout << "\nAfter swap:\n";
+    a.show();
+    b.show();
+
+    return 0;
+}
