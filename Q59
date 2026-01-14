@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+class Demo {
+    const int x;
+public:
+    Demo(int a) : x(a) {
+        cout << x;
+    }
+};
+
+int main() {
+    Demo obj(10);
+    return 0;
+}
