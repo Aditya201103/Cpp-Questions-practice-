@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+class Queue {
+    int a[5], front, rear;
+public:
+    Queue() { front = rear = -1; }
+
+    void insert(int x) {
+        if (rear == 4)
+            cout << "Queue Full\n";
+        else {
+            if (front == -1) front = 0;
+            a[++rear] = x;
+        }
+    }
+
+    void remove() {
+        if (front == -1 || front > rear)
+            cout << "Queue Empty\n";
+        else
+            front++;
+    }
+
+    void display() {
+        for (int i = front; i <= rear; i++)
+            cout << a[i] << " ";
+    }
+};
+
+int main() {
+    Queue q;
+    q.insert(5);
+    q.insert(10);
+    q.remove();
+    q.display();
+    return 0;
+}
