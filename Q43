@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+class Demo {
+public:
+    void display() {
+        cout << "Member function called";
+    }
+};
+
+int main() {
+    Demo d;
+    d.display();
+    return 0;
+}
