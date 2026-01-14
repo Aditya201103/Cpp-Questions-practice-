@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+class Student {
+protected:
+    int roll;
+public:
+    void getRoll(int r) {
+        roll = r;
+    }
+};
+
+class Marks : public Student {
+protected:
+    int m1, m2;
+public:
+    void getMarks(int a, int b) {
+        m1 = a;
+        m2 = b;
+    }
+};
+
+class Result : public Marks {
+public:
+    void display() {
+        int total = m1 + m2;
+        cout << "Roll: " << roll << endl;
+        cout << "Total Marks: " << total;
+    }
+};
+
+int main() {
+    Result r;
+    r.getRoll(1);
+    r.getMarks(40, 45);
+    r.display();
+    return 0;
+}
