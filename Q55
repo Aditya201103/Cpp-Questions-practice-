@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+class Demo {
+public:
+    Demo() {
+        cout << "Default\n";
+    }
+
+    Demo(int x) {
+        cout << "One parameter\n";
+    }
+
+    Demo(int x, int y) {
+        cout << "Two parameters\n";
+    }
+};
+
+int main() {
+    Demo a;
+    Demo b(5);
+    Demo c(5, 10);
+    return 0;
+}
