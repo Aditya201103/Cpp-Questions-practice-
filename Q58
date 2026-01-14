@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+class Demo {
+    int *p;
+public:
+    Demo() {
+        p = new int;
+        *p = 10;
+        cout << *p << endl;
+    }
+
+    ~Demo() {
+        delete p;
+    }
+};
+
+int main() {
+    Demo obj;
+    return 0;
+}
