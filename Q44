@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+class Employee {
+public:
+    int id;
+    char name[50];
+
+    void input() {
+        cin >> id >> name;
+    }
+
+    void display() {
+        cout << id << " " << name;
+    }
+};
+
+int main() {
+    Employee e;
+    e.input();
+    e.display();
+    return 0;
+}
